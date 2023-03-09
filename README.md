@@ -14,6 +14,10 @@ Additionally, the infrastructure is built using Terraform modules for efficiency
 - HTML
 - CSS
 
+## requirements
+active AWS account.
+Registered domains
+
 ## Project Structure
 ~~~
 ├── Dev
@@ -73,6 +77,7 @@ To use the project, follow these steps:
     - (bucket, region, dynamodb_table)
 7. Run terraform init to initializing the backend.
     - Enter "yes"
+    - Now u cant delate "terraform.tfstate" form your local environment.
 8. Uncomment the "website_1_logs_bucket" module in the main.tf file.
     - Run terraform init to initializing new provider plugins.
     - Run terraform plan and then Run terraform apply to deploy the infrastructure.
