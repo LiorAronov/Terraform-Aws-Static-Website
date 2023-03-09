@@ -33,3 +33,15 @@ resource "aws_s3_object" "upload_back_ground_picture" {
     content_type = "jpg"
     source_hash = filemd5("../Dev/web_image/${var.back_ground_file_name}")
 }
+
+##########################################################################
+#  Upload the css file.
+##########################################################################
+resource "aws_s3_object" "upload_css_file" {
+    bucket = aws_s3_bucket.domain_bucket.bucket
+    key = var.css_file_name
+    source = "../Dev/css/${var.css_file_name}"
+    acl = "public-read"
+    source_hash = filemd5("../Dev/css/${var.css_file_name}")
+
+}
