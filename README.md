@@ -60,29 +60,31 @@ Registered domains
 To use the project, follow these steps:
 
 1. Clone the repository to your local machine.
-2. Set up the variables.
+2. Set up connection with AWS through the CLI.
+    - use aws configure command.
+3. Set up the variables.
     - Adjust the terraform.tfvars in Dev folder.
-    - (domain_name, region, access_key, secret_key)
-3. Run terraform init to initializing the project.
-4. Run terraform apply to deploy the infrastructure.
+    - (domain_name, region)
+4. Run terraform init to initializing the project.
+. Run terraform apply to deploy the infrastructure.
    - This apply will create 14 Resources.
    - Verify the deployed infrastructure in AWS console.
    - This diployd should create: 3 S3 bucket, 1 DynamoDB table.
-5.  Get the url of the image from the main bucket.
+6.  Get the url of the image from the main bucket.
     - Insert the address to the css file in line 9.
     - On the next apply command the file will be updated in the s3 bucket.
-6. Uncomment the terraform {backend} block in the beckend.tf file.
+7. Uncomment the terraform {backend} block in the beckend.tf file.
     - Insert the desired variables manually.
     - **DO NOT import variable - it will not work!.**
     - (bucket, region, dynamodb_table)
-7. Run terraform init to initializing the backend.
+8. Run terraform init to initializing the backend.
     - Enter "yes"
     - Now u cant delate "terraform.tfstate" form your local environment.
-8. Uncomment the "website_1_logs_bucket" module in the main.tf file.
+9. Uncomment the "website_1_logs_bucket" module in the main.tf file.
     - Run terraform init to initializing new provider plugins.
     - Run terraform plan and then Run terraform apply to deploy the infrastructure.
     - This diployd should create: 1 S3 bucket
-9. Uncomment the "website_1_route53" module in the main.tf file.
+10. Uncomment the "website_1_route53" module in the main.tf file.
     -Run terraform init to Initializing provider plugins.
     - Run terraform plan and then Run terraform apply to deploy the infrastructure.
     - This diployd should create 2 route53_record for the domain_bucket and subdomain_bucket.
