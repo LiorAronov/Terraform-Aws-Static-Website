@@ -1,0 +1,40 @@
+/* Add some style to the website */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  /* Use the background image from the bucket */
+  background-image: url("<... Enter here the image url - Manually - ...>);
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Set the height to 100% of the viewport */
+}
+
+.content {
+  /* Center the content vertically and horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+h1 {
+   /* Make the title larger and white */
+   font-size: 48px;
+   color: black;
+}
+
+p {
+   /* Make the paragraphs smaller and white */
+   font-size: 18px;
+   color: black;
+}
+
+a {
+   /* Make the links blue and underlined */
+   color: blue;
+   text-decoration: underline; 
+}
