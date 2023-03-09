@@ -27,6 +27,7 @@ Additionally, the infrastructure is built using Terraform modules for efficiency
 │   ├── .gitignore
 │   ├── beckend.tf
 │   ├── main.tf
+│   ├── provider.tf
 │   └── variable.tf
 │   
 └── Modules
