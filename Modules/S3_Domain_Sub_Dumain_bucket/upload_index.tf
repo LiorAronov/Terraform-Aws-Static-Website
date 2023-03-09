@@ -21,3 +21,15 @@ resource "aws_s3_object" "upload_error_file" {
     content_type = "text/html"
     source_hash = filemd5("../Dev/html/${var.error_file_name}")
 }
+
+##########################################################################
+#  Upload the back ground picture.
+##########################################################################
+resource "aws_s3_object" "upload_back_ground_picture" {
+    bucket = aws_s3_bucket.domain_bucket.bucket
+    key = "images/${var.back_ground_file_name}"
+    source = "../Dev/web_image/${var.back_ground_file_name}"
+    acl = "public-read"
+    content_type = "jpg"
+    source_hash = filemd5("../Dev/web_image/${var.back_ground_file_name}")
+}
