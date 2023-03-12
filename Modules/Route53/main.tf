@@ -21,7 +21,7 @@ resource "aws_route53_record" "subdomain_bucket" {
   type    = "A"
   alias {
     name = data.aws_s3_bucket.subdomain_bucket_data.website_domain
-    zone_id = data.aws_s3_bucket.subdomain_bucket_data.hosted_zone_id
+    zone_id = data.aws_s3_bucket.domain_bucket_data.hosted_zone_id
     evaluate_target_health = true  
   }
 }

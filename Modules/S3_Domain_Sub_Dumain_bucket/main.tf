@@ -33,11 +33,6 @@ resource "aws_s3_bucket" "subdomain_bucket" {
   bucket = "www.${var.domain_name}"
 }
 ##########################################################################
-resource "aws_s3_bucket_acl" "subdomain_bucket_acl" {
-  bucket = aws_s3_bucket.subdomain_bucket.id
-  acl    = "private"
-}
-##########################################################################
 resource "aws_s3_bucket_website_configuration" "subdomain_bucket_configuration" {
   bucket = aws_s3_bucket.subdomain_bucket.id
   redirect_all_requests_to {
