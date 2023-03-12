@@ -26,8 +26,13 @@ Additionally, the infrastructure is built using Terraform modules for efficiency
 - CSS
 
 ## requirements
+<<<<<<< HEAD
 - Active AWS account.
 - Registered domains.
+=======
+- active AWS account.
+- Registered domains
+>>>>>>> 3cb0e6810122b717110a4d81bdad169e2774c81a
 
 ## Project Structure
 ~~~
