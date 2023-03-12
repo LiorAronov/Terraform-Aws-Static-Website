@@ -1,20 +1,13 @@
 # Terraform Aws Static Website
 This project is designed to manage the infrastructure for a static website hosted on AWS using Terraform. 
-Once we are finished we are going to have the following components:
+Once we are finished we are going to have the following resource:
 
-- S3 bucket that hosts our website files 
-- S3 bucket that serves as the redirect to our www subdomain
-- S3 bucket that serves as Logging web traffic.
+- S3 bucket that hosts our main-domain with the website files.
+- S3 bucket that serves as the redirect from www.domain-name to our main-domain.
+- S3 bucket that contain the Logging web traffic.
 - S3 bucket that serves as Remote State.
 - Dynamodb table  that serves as State locking.
-- Route 53 records pointed at to our Cloudfront distributions.
-
-
-
-It consists of three buckets: 
-one for the main domain, which includes the HTML, CSS files and the rest of the site content
-one for routing the subdomain to the main domain 
-and one for storing log files.
+- Route 53 records pointed at to our S3 buckets.
 
 To ensure data security and follow Terraform best practices, this project uses remote state and locking state. 
 Additionally, the infrastructure is built using Terraform modules for efficiency and easy reuse of the environment.
@@ -26,14 +19,8 @@ Additionally, the infrastructure is built using Terraform modules for efficiency
 - CSS
 
 ## requirements
-<<<<<<< HEAD
 - Active AWS account.
 - Registered domains.
-=======
-- active AWS account.
-- Registered domains
->>>>>>> 3cb0e6810122b717110a4d81bdad169e2774c81a
-
 ## Project Structure
 ~~~
 ├── Dev
