@@ -2,7 +2,7 @@
 This project is designed to create and manage the infrastructure for a static website hosted on AWS using Terraform. Once we are finished, we will have the following resources:
 
 - An S3 bucket that hosts our main domain with the website files.
-- An S3 bucket that serves as a redirect from sub domain to our main domaiמ.
+- An S3 bucket that serves as a redirect from sub domain to our main domain.
 - An S3 bucket that contains the logging web traffic.
 - An S3 bucket that serves as remote state.
 - A DynamoDB table that serves as locking state.
