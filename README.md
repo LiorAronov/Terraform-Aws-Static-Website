@@ -1,23 +1,35 @@
 # Terraform Aws Static Website
-This project is designed to manage the infrastructure for a static website hosted on AWS using Terraform. Once we are finished, we will have the following resources:
+This project is designed to create and manage the infrastructure for a static website hosted on AWS using Terraform. Once we are finished, we will have the following resources:
 
 - An S3 bucket that hosts our main domain with the website files.
 - An S3 bucket that serves as a redirect from www.domain-name to our main domain.
 - An S3 bucket that contains the logging web traffic.
 - An S3 bucket that serves as remote state.
-- A DynamoDB table that serves as state locking.
+- A DynamoDB table that serves as locking state.
 - Route 53 records pointed at our S3 buckets.
 
 To ensure data security and follow Terraform best practices, this project uses remote state and locking state. Additionally, the infrastructure is built using Terraform modules for efficiency and easy reuse of the environment.
-## Technologies used
+
+ ## Table of Contents
+* [Technologies Used](#technologies-used)  
+* [Requirements](#requirements)  
+* [Architecture Diagrams](#architecture-diagrams)  
+* [Project Structure](#project-structure)  
+* [Costs](#costs)  
+* [Getting Started](#getting-started)  
+* [Troubleshooting Tips](#troubleshooting-tips)  
+## Technologies Used
 - Terraform
 - AWS
 - HTML
 - CSS
-
 ## Requirements
 - Active AWS account.
 - Registered domains.
+
+## Architecture Diagrams
+
+![architecture diagrams](https://user-images.githubusercontent.com/111339448/224784116-da2470a2-b765-4efc-8ef2-f57ca7e14148.png)
 ## Project Structure
 ~~~
 ├── Dev
@@ -54,7 +66,7 @@ To ensure data security and follow Terraform best practices, this project uses r
         └── variable.tf
 ~~~
 ## Costs
-This project is designed to operate within the free tier of AWS. However, using this project may result in charges from AWS if you exceed the free tier limits. Please review the pricing information for each AWS service before using this project. You can find more information on AWS pricing at the <a href="https://aws.amazon.com/pricing/?aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all" target="_blank">AWS Pricing page.</a>
+This project is designed to operate within the free tier of AWS. However, using this project may result in charges from AWS if you exceed the free tier limits. Please review the pricing information for each AWS service before using this project. You can find more information on AWS pricing at the <a href="https://aws.amazon.com/pricing/?aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all" target="_blank">AWS Pricing page.</a> 
 
 If you do not qualify for the free tier, the expected costs for the following resources will be:
 
@@ -62,7 +74,7 @@ If you do not qualify for the free tier, the expected costs for the following re
 
 Note that the free tier includes certain usage limits for each service, and charges will apply if you exceed these limits. It is important to monitor your usage of AWS resources and set up billing alerts to avoid unexpected charges. You can find more information on the AWS Free Tier usage limits and how to set up billing alerts on the <a href="https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all" target="_blank">AWS Free Tier page.</a>
 
-## Installation and Usage
+## Getting Started
 To use the project, follow these steps:
 
 1. Clone the repository to your local machine.
@@ -137,7 +149,9 @@ To use the project, follow these steps:
 
 ![The site](https://user-images.githubusercontent.com/111339448/224541029-b9bd640d-43cc-4d55-8d0d-1b9cf17c86e2.png)
 
-## troubleshooting tips
+## Troubleshooting Tips
 
-    - If the website does not load, try again after a few minutes or try from an incognito window.
-    - If you don't see the background image, try using another browser.
+If you're experiencing issues while using the website, try the following tips to resolve them:
+- Use an incognito window to access the website if it's not loading properly.
+- If the website fails to load, wait a few minutes before trying again.
+- If the background image is not visible, try switching to an different browser.
