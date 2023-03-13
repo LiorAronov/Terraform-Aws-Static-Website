@@ -18,7 +18,7 @@ Additionally, the infrastructure is built using Terraform modules for efficiency
 - HTML
 - CSS
 
-## requirements
+## Requirements
 - Active AWS account.
 - Registered domains.
 ## Project Structure
@@ -117,9 +117,9 @@ To use the project, follow these steps:
 
 ![Uncomment_website_1_logs_bucket](https://user-images.githubusercontent.com/111339448/224539913-12fb20a3-2e6f-41db-9dae-17fa70223594.gif)
 
-![init logs moudle](https://user-images.githubusercontent.com/111339448/224540253-360a3928-069e-404f-9f21-cfd6dba6f6be.png)
+![init logs moudle](https://user-images.githubusercontent.com/111339448/224625130-e31ae528-8763-458b-ab9c-ed69211a6c04.png)
 
-10. Uncomment the "website_1_route53" module in the main.tf file.
+11. Uncomment the "website_1_route53" module in the main.tf file.
     - Run terraform init to Initializing provider plugins.
     - Run terraform plan and then Run terraform apply to deploy the infrastructure.
     - This diployd should create 2 route53_record for the domain_bucket and subdomain_bucket.
@@ -129,7 +129,7 @@ To use the project, follow these steps:
 
 ![init route53 moudle ](https://user-images.githubusercontent.com/111339448/224540711-491a0317-1522-402b-b984-c9a26616629b.png)
 
-11. The site is ready and live.
+12. The site is ready and live.
     - Use the domain_name or subdomain_name to reach him.
     - If the website does not load - try again after a few minutes or/and try from Incognito window.
     - If you don't see the background image, try using another browser.
