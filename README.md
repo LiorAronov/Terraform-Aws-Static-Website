@@ -1,4 +1,5 @@
 # Terraform Aws Static Website
+## Overview
 This project is designed to create and manage the infrastructure for a static website hosted on AWS using Terraform. Once we are finished, we will have the following resources:
 
 - An S3 bucket that hosts our main domain with the website files.
@@ -24,8 +25,11 @@ To ensure data security and follow Terraform best practices, this project uses r
 - HTML
 - CSS
 ## Requirements
-- Active AWS account.
+Before starting this project, please ensure that you meet the following requirements:
+- An active AWS account.
 - Registered domains.
+- AWS CLI installed on your local machine. You can download and install it from the official AWS documentation <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" target="_blank">here.</a> 
+- Terraform installed on your local machine. You can download and install it from the official Terraform websit <a href="https://developer.hashicorp.com/terraform/downloads" target="_blank">here.</a> 
 
 ## Architecture Diagrams
 
