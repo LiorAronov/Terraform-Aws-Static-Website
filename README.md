@@ -29,7 +29,7 @@ To ensure data security and follow Terraform best practices, this project uses r
 
 ## Architecture Diagrams
 
-![architecture diagrams](https://user-images.githubusercontent.com/111339448/224784116-da2470a2-b765-4efc-8ef2-f57ca7e14148.png)
+![architecture diagrams](https://user-images.githubusercontent.com/111339448/224787086-05238c5a-e569-4f68-bd74-50e4a67da51e.png)
 ## Project Structure
 ~~~
 ├── Dev
