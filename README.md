@@ -53,13 +53,14 @@ To ensure data security and follow Terraform best practices, this project uses r
         ├── main.tf
         └── variable.tf
 ~~~
-<!-- ## Features -->
 ## Costs
-Using this project may result in charges from AWS. The exact cost will depend on your usage of AWS resources, such as S3 buckets and DynamoDB tables. Please review the pricing information for each service before using this project. You can find more information on AWS pricing at the [AWS Pricing page.](https://aws.amazon.com/pricing/?aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all)
+This project is designed to operate within the free tier of AWS. However, using this project may result in charges from AWS if you exceed the free tier limits. Please review the pricing information for each AWS service before using this project. You can find more information on AWS pricing at the <a href="https://aws.amazon.com/pricing/?aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all" target="_blank">AWS Pricing page.</a>
+
+If you do not qualify for the free tier, the expected costs for the following resources will be:
 
 ![cost_chart](https://user-images.githubusercontent.com/111339448/224671612-97d1afca-e50f-4dc3-a548-51d5dc3c6377.png)
 
-However, it is worth noting that the entire project is designed to operate within the free tier of AWS, which provides a certain level of usage for many AWS services at no charge. This means that for many users, the cost of using this project may be minimal or nonexistent.
+Note that the free tier includes certain usage limits for each service, and charges will apply if you exceed these limits. It is important to monitor your usage of AWS resources and set up billing alerts to avoid unexpected charges. You can find more information on the AWS Free Tier usage limits and how to set up billing alerts on the <a href="https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all" target="_blank">AWS Free Tier page.</a>
 
 ## Installation and Usage
 To use the project, follow these steps:
@@ -101,7 +102,7 @@ To use the project, follow these steps:
 ![css file_line 9](https://user-images.githubusercontent.com/111339448/224538064-e02ca03b-6051-4070-b47c-2c7ba474475f.png)
 
 8. Uncomment the terraform-backend block in the "beckend.tf" file.
-    - Set up the necessary variables **manually** (bucket-name, region, dynamodb_table-name).
+    - Set up the necessary variables **manually** (bucket, region, dynamodb_table).
     - **DO NOT import variables - it will not work!.**
 
 ![Uncomment_backend](https://user-images.githubusercontent.com/111339448/224539380-513d3ced-efeb-4240-b8b6-7873e4259bad.gif)
@@ -140,23 +141,3 @@ To use the project, follow these steps:
 
     - If the website does not load, try again after a few minutes or try from an incognito window.
     - If you don't see the background image, try using another browser.
-
-
-
-
-
-Deploying infrastructure on AWS incurs costs for the resources used. The following is an estimate of the costs associated with the deployment described in this document.
-
-Route53: This service is used for domain registration and DNS management. The cost for registering a domain varies, but typically ranges from $10 to $15 per year. Additionally, there is a charge for the number of DNS queries performed, which is $0.40 per million queries.
-
-S3 Bucket: The cost for storing data in an S3 bucket depends on the amount of data stored and the number of requests made. Storage costs range from $0.023 per GB per month to $0.12 per GB per month, depending on the storage class used. Requests are charged at $0.005 per 1,000 PUT, COPY, POST, or LIST requests, and $0.0004 per 1,000 GET and all other requests.
-
-CloudFront: This service is used for content delivery and caching. The cost for using CloudFront depends on the amount of data transferred and the number of requests made. Data transfer costs range from $0.085 per GB to $0.14 per GB, depending on the location of the edge server. Request costs are charged at $0.0075 per 10,000 requests.
-
-ACM: This service is used for SSL/TLS certificate management. The cost for using ACM is free.
-
-IAM: This service is used for access management. The cost for using IAM is free.
-
-EC2: This service is used for hosting the application. The cost for using EC2 depends on the type of instance used and the amount of time it is running. On-demand pricing starts at $0.0052 per hour for the t2.nano instance type.
-
-Please note that these costs are estimates and are subject to change. It is recommended to review the AWS pricing documentation for the latest pricing information.
