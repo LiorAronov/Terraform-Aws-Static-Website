@@ -45,7 +45,7 @@ Before starting this project, please ensure that you meet the following requirem
 │   ├── web_image 
 │   │    └── back_ground.jpg
 │   ├── .gitignore
-│   ├── beckend.tf
+│   ├── backend.tf
 │   ├── main.tf
 │   ├── provider.tf
 │   └── variable.tf
@@ -117,7 +117,7 @@ To use the project, follow these steps:
 
 ![css file_line 9](https://user-images.githubusercontent.com/111339448/224538064-e02ca03b-6051-4070-b47c-2c7ba474475f.png)
 
-8. Uncomment the terraform-backend block in the "beckend.tf" file.
+8. Uncomment the terraform-backend block in the "backend.tf" file.
     - Set up the necessary variables **manually** (bucket, region, dynamodb_table).
     - **DO NOT import variables - it will not work!.**
 
