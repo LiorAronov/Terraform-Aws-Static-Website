@@ -33,7 +33,7 @@ Before starting this project, please ensure that you meet the following requirem
 
 ## Architecture Diagrams
 
-![architecture diagrams](https://user-images.githubusercontent.com/111339448/224787086-05238c5a-e569-4f68-bd74-50e4a67da51e.png)
+![architecture diagrams](https://user-images.githubusercontent.com/111339448/224920419-a8872d54-6e82-4069-91d8-654072ad97a5.png)
 ## Project Structure
 ~~~
 ├── Dev
